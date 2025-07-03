@@ -12,14 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblHum: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
     
-    @IBAction func btnPressed(_ sender: Any) {
+    @IBOutlet weak var text2: UITextField!
+    
+    
+    @IBAction func btnPressed(_ sender: AnyObject) {
         
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            lblHum.text = ("You pressed it 10 times!")
-        }
+        print(text1.text!)
+        print(text2.text!)
         
     }
     
