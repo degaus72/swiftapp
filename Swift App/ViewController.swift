@@ -9,9 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var lblHum: UILabel!
-    @IBOutlet weak var lblTemp: UILabel!
     
+    @IBOutlet weak var lblTest: UILabel!
     @IBOutlet weak var text1: UITextField!
     
     @IBOutlet weak var text2: UITextField!
@@ -19,21 +18,23 @@ class ViewController: UIViewController {
     
     @IBAction func btnPressed(_ sender: AnyObject) {
         
-        lblTemp.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        let addition = false
         
+        if addition {
+            lblTest.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            lblTest.text = "Answer: \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        lblTemp.text = "Temperature"
-        lblTemp.textColor = .blue
-        lblTemp.attributedText = NSAttributedString(string: "Temperature", attributes: [.font: UIFont.boldSystemFont(ofSize: 30)])
-        lblHum.text = "Humidity"
-        lblHum.textColor = .blue
-        lblHum.attributedText = NSAttributedString(string: "Humidity", attributes: [.font: UIFont.boldSystemFont(ofSize: 30)])
+        lblTest.text = "Humidity"
+        lblTest.textColor = .blue
+        lblTest.attributedText = NSAttributedString(string: "TEST", attributes: [.font: UIFont.boldSystemFont(ofSize: 30)])
     }
-
-
+    
+    
 }
 
